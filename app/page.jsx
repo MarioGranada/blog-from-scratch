@@ -1,7 +1,13 @@
 import FeaturedPosts from '@/src/components/FeaturedPosts';
 import Hero from '../src/components/Hero';
-import DUMMY_POSTS from '@/src/shared/mockData/dummy_posts';
 import { getFeaturedPosts } from '@/src/helpers/posts-utils';
+
+export const generateMetadata = async () => {
+  return {
+    title: "Mario's Web Development Blog",
+    description: "Hi! this is Mario's Web Development Blog",
+  };
+};
 
 const HomePage = async () => {
   const featuredPosts = getFeaturedPosts();
