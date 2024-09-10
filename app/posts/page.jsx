@@ -1,9 +1,9 @@
+import AllPosts from '@/src/PagesComponents/AllPosts';
+import { getAllPosts } from '@/src/helpers/posts-utils';
+
 const AllPostsPage = async () => {
-  return (
-    <div>
-      <h1>All Posts</h1>
-    </div>
-  );
+  const allPosts = getAllPosts();
+  return <AllPosts posts={allPosts} />;
 };
 
 export default AllPostsPage;
