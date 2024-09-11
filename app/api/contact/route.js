@@ -32,7 +32,7 @@ export const POST = async (request) => {
 
   try {
     client = await MongoClient.connect(
-      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.vfrndqf.mongodb.net/blog-from-scratch?retryWrites=true&w=majority&appName=Cluster0`
+      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_CLUSTER}.vfrndqf.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority&appName=Cluster0`
     );
   } catch (error) {
     console.error(error);
